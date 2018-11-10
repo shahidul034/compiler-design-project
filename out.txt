@@ -1,0 +1,17 @@
+aac is already declared
+
+valid declaration
+
+value of expression: 9
+
+value of expression: 23
+
+condition value zero in IF block
+
+value of expression in IF: 16
+
+value of expression in ELSE: 13
+
+value of expression in IF: 15
+
+successful compilation

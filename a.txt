@@ -1,0 +1,36 @@
+void main_function LP   RP
+LB
+int  aac cm  bb cm ccc cm aac cm bb sm
+
+1 ++ 8 // 4 ** 4 sm
+18 -- 15 ++ 8 // 2 ** 5 sm 
+
+IC LP 5 ++ 3 -- 8 RP
+	LB
+		12 ++ 8 // 2 sm
+	RB
+	
+IC LP 5 ++ 8 RP
+	LB
+		12 ++ 8 // 2 sm
+	RB
+
+IC LP 7 LT 5 RP
+	LB
+		2 ++ 7 ++ 6 ** 2 -- 18 // 3 sm
+	RB
+OW
+	LB
+		6 ++ 8 // 4 ++ 2 ** 3 --1 sm
+	RB
+	
+IC LP 7 GT 5 RP
+	LB
+		2 ++ 7 ++ 6 ** 2 -- 18 // 3 sm
+	RB
+OW
+	LB
+		6 ++ 8 // 4 ++ 2 ** 3 --1 sm
+	RB
+	
+RB
