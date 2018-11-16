@@ -12,42 +12,53 @@
 /*RE and Action*/
 
 %%
-
+"{"	 { 
+//printf("LB");
+return LB; }
+"}"	  { 
+//printf("RB");
+return RB; }
+"COLON"   {return COLON;}
+"BREAK"    {    return BREAK;     }
+"CASE"      { return CASE;      }
+"select"      { return SWITCH;	}
+"DEFAULT"     {  return DEFAULT; 	}
+"WHILE"  {return WHILE;}
 "int"	{ return INT; }
 "float"	{ return FLOAT; }
 "char"	{ return CHAR; }
-
+":"     {return COL;}
 [0-9]+	{ 
 		yylval.number = atoi(yytext);
 		return NUM;
 	}
-	
+"FOR"   {return FOR;}	
 "LP"	{ return LP; }
 "RP"	{ return RP; }
-"LB"	{ return LB; }
-"RB"	{ return RB; }
+
 "cm"	{ return CM; }
-"sm"	{ return SM; }
-"++"	{ return PLUS; }
-"--"	{ return MINUS; }
-"**"	{ return MULT; }
-"//"	{ return DIV; }
-"<-"	{ return ASSIGN;  }
-"GT"	{ return GT; }
-"LT"	{ return LT; }
+"$$"	{ return SM; }
+"jog"	{ return PLUS; }
+"biyog"	{ return MINUS; }
+"goon"	{ return MULT; }
+"bag"	{ return DIV; }
+"="	{ return ASSIGN;  }
+">>"	{ return GT; }
+"<<"	{ return LT; }
 
 [a-z]+  {
 	 yylval.string=strdup(yytext);return VAR;
 	}
 
-"IC"		{ return IF;		}
-"OW"		{ return ELSE;		}
+"IF"		{ return IF;		}
+"ELSE"		{ return ELSE;		}
 
-"void main_function"	{ return VOIDMAIN; }
+"function @func_name"	{ return VOIDMAIN; }
 
-[ \t\n]*	;
+[ \t\n]*	
 
 .	{
+	//printf("error: %s\n",*yytext);
 		yyerror("Unknown Character.\n");
 	}
 %%

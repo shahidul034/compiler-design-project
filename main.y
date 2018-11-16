@@ -3,7 +3,7 @@
 %{
 	#include<stdio.h>
 	//int sym[26],store[26];
-	int cnt=1;
+	int cnt=1,cntt=0,val;
 	typedef struct entry {
     char *str;
     int n;
@@ -24,7 +24,7 @@
 
 %token <number> NUM
 %token <string> VAR 
-%token <string> IF ELSE VOIDMAIN INT FLOAT CHAR LP RP LB RB CM SM PLUS MINUS MULT DIV ASSIGN
+%token <string> IF ELSE VOIDMAIN INT FLOAT CHAR LP RP LB RB CM SM PLUS MINUS MULT DIV ASSIGN FOR COL WHILE BREAK COLON DEFAULT CASE SWITCH
 %type <string> statement
 %type <number> expression
 %nonassoc IFX
@@ -83,14 +83,21 @@ ID1  : ID1 CM VAR	{
      ;
 
 statement: SM
+	| SWITCH LP expression RP BASE     {printf("SWITCH case.\n");val=$3;} 
 
 	| expression SM 			{ printf("\nvalue of expression: %d\n", ($1)); }
 
-        | VAR ASSIGN expression SM 		{ 
+        | VAR ASSIGN expression SM 		{
+							if(number_for_key($1)){
 							inskorlam2(&sym[$3], $1, $3);
 							
-							 
-							printf("\nValue of the variable: %d\t\n",$3);
+							//printf("\n(%s) Value of the variable: %d\t\n",sym[$3].str,sym[$3].n); 
+							printf("\n(%s) Value of the variable: %d\t\n",$1,$3);
+							}
+							else {
+							printf("%s not declared yet\n",$1);
+							}
+							
 						}
 
 	| IF LP expression RP LB expression SM RB %prec IFX {
@@ -114,11 +121,54 @@ statement: SM
 										printf("\nvalue of expression in ELSE: %d\n",$11);
 									}
 								   }
+	| FOR LP NUM COL NUM RP LB expression RB     {
+	   int i=0;
+	   //printf("hoiche\n");
+	   for(i=$3;i<$5;i++){
+	   printf("for loop statement\n");
+	   }
+	}
+	| WHILE LP NUM GT NUM RP LB expression RB   {
+										int i;
+										printf("While LOOP: ");
+										for(i=$3;i<=$5;i++)
+										{
+											printf("%d ",i);
+										}
+										printf("\n");
+	}
 	;
+///////////////////////
+	
+			BASE : Bas   
+				 | Bas Dflt 
+				 ;
 
+			Bas   : /*NULL*/
+				 | Bas Cs     
+				 ;
+
+			Cs    : CASE NUM COL expression SM   {
+				//printf("NUM: %d val: %d\n",$2,val);
+						if($2==2){
+							  cntt=1;
+							  printf("\nCase No : %d  and Result :  %d\n",$2,$4);
+						}
+					}
+				 ;
+
+			Dflt    : DEFAULT COLON NUM SM    {
+						if(cntt==0){
+							printf("\nResult in default Value is :  %d \n",$3);
+						}
+					}
+				 ;    
+	/////////////////////////////
+	
+	
 expression: NUM				{ $$ = $1; 	}
 
-	| VAR				{ $$ = number_for_key2($1); }
+	| VAR				{ $$ = number_for_key2($1); printf("Variable value: %d",$$)}
 
 	| expression PLUS expression	{ $$ = $1 + $3; }
 
@@ -142,6 +192,7 @@ expression: NUM				{ $$ = $1; 	}
 	| expression GT expression	{ $$ = $1 > $3; }
 
 	| LP expression RP		{ $$ = $2;	}
+	
 	;
 %%
 //////////////////////////
@@ -168,6 +219,7 @@ void inskorlam2 (dict *p, char *s, int n)
 {
   p->str = s;
   p->n = n;
+  //printf("\n(%s) Value of the variable2: %d\t\n",p->str,p->n);
 }
 
 int

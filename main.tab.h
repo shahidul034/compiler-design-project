@@ -58,9 +58,17 @@
      MULT = 274,
      DIV = 275,
      ASSIGN = 276,
-     IFX = 277,
-     GT = 278,
-     LT = 279
+     FOR = 277,
+     COL = 278,
+     WHILE = 279,
+     BREAK = 280,
+     COLON = 281,
+     DEFAULT = 282,
+     CASE = 283,
+     SWITCH = 284,
+     IFX = 285,
+     GT = 286,
+     LT = 287
    };
 #endif
 
@@ -79,7 +87,7 @@ typedef union YYSTYPE
 
 
 /* Line 1676 of yacc.c  */
-#line 83 "main.tab.h"
+#line 91 "main.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */

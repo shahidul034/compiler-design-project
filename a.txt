@@ -1,36 +1,44 @@
-void main_function LP   RP
-LB
-int  aac cm  bb cm ccc cm aac cm bb sm
-
-1 ++ 8 // 4 ** 4 sm
-18 -- 15 ++ 8 // 2 ** 5 sm 
-
-IC LP 5 ++ 3 -- 8 RP
-	LB
-		12 ++ 8 // 2 sm
-	RB
+function @func_name LP   RP
+{
+int  princeaa cm  princebb cm princecc cm princeaa cm princeb $$
+princeaa = 8 $$
+princeaad = 8 $$
+1 jog 8 bag 4 goon 4 $$
+18 biyog 15 jog 8 bag 2 goon 5 $$ 
+IF LP 5 jog 3 biyog 8 RP
+	{
+		12 jog 8 bag 2 $$
+	}
 	
-IC LP 5 ++ 8 RP
-	LB
-		12 ++ 8 // 2 sm
-	RB
+IF LP 5 jog 8 RP
+	{
+		12 jog 8 bag 2 $$
+	}
 
-IC LP 7 LT 5 RP
-	LB
-		2 ++ 7 ++ 6 ** 2 -- 18 // 3 sm
-	RB
-OW
-	LB
-		6 ++ 8 // 4 ++ 2 ** 3 --1 sm
-	RB
+IF LP 7 << 5 RP
+	{
+		2 jog 7 jog 6 goon 2 biyog 18 bag 3 $$
+	}
+ELSE
+	{
+		6 jog 8 bag 4 jog 2 goon 3 biyog 1 $$
+	}
 	
-IC LP 7 GT 5 RP
-	LB
-		2 ++ 7 ++ 6 ** 2 -- 18 // 3 sm
-	RB
-OW
-	LB
-		6 ++ 8 // 4 ++ 2 ** 3 --1 sm
-	RB
+IF LP 7 >> 5 RP
+	{
+		2 jog 7 jog 6 goon 2 biyog 18 bag 3 $$
+	}
+ELSE
+	{
+		6 jog 8 bag 4 jog 2 goon 3 biyog 1 $$
+	}
 	
-RB
+FOR LP 2 : 6 RP { 4 jog 2 }
+
+WHILE LP 0 >> 5 RP { 4 jog 2 }
+
+select LP 2 RP CASE 1 : 4 jog 2 $$ CASE 2 : 3 jog 2 $$
+   
+ 
+	
+}

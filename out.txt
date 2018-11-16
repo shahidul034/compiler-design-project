@@ -1,6 +1,9 @@
-aac is already declared
+princeaa is already declared
 
 valid declaration
+
+(princeaa) Value of the variable: 8	
+princeaad not declared yet
 
 value of expression: 9
 
@@ -13,5 +16,13 @@ value of expression in IF: 16
 value of expression in ELSE: 13
 
 value of expression in IF: 15
+for loop statement
+for loop statement
+for loop statement
+for loop statement
+While LOOP: 0 1 2 3 4 5 
+
+Case No : 2  and Result :  5
+SWITCH case.
 
 successful compilation
