@@ -66,9 +66,12 @@
      DEFAULT = 282,
      CASE = 283,
      SWITCH = 284,
-     IFX = 285,
-     GT = 286,
-     LT = 287
+     inc = 285,
+     importtt = 286,
+     inpit = 287,
+     IFX = 288,
+     GT = 289,
+     LT = 290
    };
 #endif
 
@@ -87,7 +90,7 @@ typedef union YYSTYPE
 
 
 /* Line 1676 of yacc.c  */
-#line 91 "main.tab.h"
+#line 94 "main.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */

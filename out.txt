@@ -1,28 +1,19 @@
-princeaa is already declared
+syntax error
 
-valid declaration
-
-(princeaa) Value of the variable: 8	
-princeaad not declared yet
-
-value of expression: 9
-
-value of expression: 23
-
-condition value zero in IF block
-
-value of expression in IF: 16
-
-value of expression in ELSE: 13
-
-value of expression in IF: 15
-for loop statement
-for loop statement
-for loop statement
-for loop statement
-While LOOP: 0 1 2 3 4 5 
-
-Case No : 2  and Result :  5
-SWITCH case.
-
-successful compilation
+Identfiers=0
+arithmatic_operator=0
+unary_operator=0
+_logical_operator=0
+relational_operator=0
+assignment_operator=0
+library_function=0
+datatype=0
+loop=0
+conditional_statement=0
+integer=0
+floatnum=0
+NewLine=0
+mcmnt=0
+_user_function=0
+Keyword=0
+Single line comment=0

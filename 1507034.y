@@ -24,7 +24,7 @@
 
 %token <number> NUM
 %token <string> VAR 
-%token <string> IF ELSE VOIDMAIN INT FLOAT CHAR LP RP LB RB CM SM PLUS MINUS MULT DIV ASSIGN FOR COL WHILE BREAK COLON DEFAULT CASE SWITCH
+%token <string> IF ELSE VOIDMAIN INT FLOAT CHAR LP RP LB RB CM SM PLUS MINUS MULT DIV ASSIGN FOR COL WHILE BREAK COLON DEFAULT CASE SWITCH inc importtt inpit
 %type <string> statement
 %type <number> expression
 %nonassoc IFX
@@ -47,6 +47,7 @@ cstatement: /* empty */
 	;
 
 cdeclaration:	TYPE ID1 SM	{ printf("\nvalid declaration\n"); }
+		| importtt inpit SM    
 			;
 			
 TYPE : INT
@@ -83,7 +84,7 @@ ID1  : ID1 CM VAR	{
      ;
 
 statement: SM
-	| SWITCH LP expression RP BASE     {printf("SWITCH case.\n");val=$3;} 
+	| SWITCH LP expression RP LB BASE RB    {printf("SWITCH case.\n");val=$3;} 
 
 	| expression SM 			{ printf("\nvalue of expression: %d\n", ($1)); }
 
@@ -192,7 +193,7 @@ expression: NUM				{ $$ = $1; 	}
 	| expression GT expression	{ $$ = $1 > $3; }
 
 	| LP expression RP		{ $$ = $2;	}
-	
+	| inc expression inc         { $$=$2+1; printf("inc: %d\n",$$);}
 	;
 %%
 //////////////////////////
