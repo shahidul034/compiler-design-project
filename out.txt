@@ -1,19 +1,50 @@
-syntax error
+princeaa is already declared
 
-Identfiers=0
-arithmatic_operator=0
-unary_operator=0
+valid declaration
+
+(princeaa) Value of the variable: 8	
+princeaad not declared yet
+inc: 9
+
+value of expression: 9
+
+value of expression: 9
+
+value of expression: 23
+
+condition value zero in IF block
+
+value of expression in IF: 16
+
+value of expression in ELSE: 13
+
+value of expression in IF: 15
+for loop statement
+for loop statement
+for loop statement
+for loop statement
+While LOOP: 0 1 2 3 4 5 
+
+Case No : 2  and Result :  5
+SWITCH case.
+single line comment
+multiple_line_comment
+successful compilation
+
+Identfiers=7
+arithmatic_operator=38
+unary_operator=2
 _logical_operator=0
-relational_operator=0
+relational_operator=5
 assignment_operator=0
 library_function=0
-datatype=0
+datatype=1
 loop=0
-conditional_statement=0
+conditional_statement=6
 integer=0
 floatnum=0
-NewLine=0
-mcmnt=0
+NewLine=14
+mcmnt=1
 _user_function=0
-Keyword=0
-Single line comment=0
+Keyword=113
+Single line comment=1

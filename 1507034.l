@@ -3,7 +3,7 @@
 %{
 	#include<stdio.h>
 	#include <string.h>
-	#include "main.tab.h"
+	#include "1507034.tab.h"
 	#include<stdlib.h>
 	int _user_function=0,keyword=0,_identifiers=0,_arithmatic_operator=0,_unary_operator=0,_logical_operator=0,_relational_operator=0,_assignment_operator=0,_library_function=0,_datatype=0,_loop=0,cndstatement=0,_integer=0,floatnum=0,_string=0,scmnt=0,mcmnt=0,newl=0;
 

@@ -68,7 +68,7 @@
 /* Copy the first part of user declarations.  */
 
 /* Line 189 of yacc.c  */
-#line 3 "main.y"
+#line 3 "1507034.y"
 
 	#include<stdio.h>
 	//int sym[26],store[26];
@@ -86,7 +86,7 @@
 
 
 /* Line 189 of yacc.c  */
-#line 90 "main.tab.c"
+#line 90 "1507034.tab.c"
 
 /* Enabling traces.  */
 #ifndef YYDEBUG
@@ -156,7 +156,7 @@ typedef union YYSTYPE
 {
 
 /* Line 214 of yacc.c  */
-#line 19 "main.y"
+#line 19 "1507034.y"
 
         int number;
         char *string;
@@ -164,7 +164,7 @@ typedef union YYSTYPE
 
 
 /* Line 214 of yacc.c  */
-#line 168 "main.tab.c"
+#line 168 "1507034.tab.c"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
@@ -176,7 +176,7 @@ typedef union YYSTYPE
 
 
 /* Line 264 of yacc.c  */
-#line 180 "main.tab.c"
+#line 180 "1507034.tab.c"
 
 #ifdef short
 # undef short
@@ -1450,21 +1450,21 @@ yyreduce:
         case 2:
 
 /* Line 1455 of yacc.c  */
-#line 39 "main.y"
+#line 39 "1507034.y"
     { printf("\nsuccessful compilation\n"); ;}
     break;
 
   case 6:
 
 /* Line 1455 of yacc.c  */
-#line 49 "main.y"
+#line 49 "1507034.y"
     { printf("\nvalid declaration\n"); ;}
     break;
 
   case 11:
 
 /* Line 1455 of yacc.c  */
-#line 60 "main.y"
+#line 60 "1507034.y"
     {
 						if(number_for_key((yyvsp[(3) - (3)].string)) == 1)
 						{
@@ -1482,7 +1482,7 @@ yyreduce:
   case 12:
 
 /* Line 1455 of yacc.c  */
-#line 73 "main.y"
+#line 73 "1507034.y"
     {
 				if(number_for_key((yyvsp[(1) - (1)].string)) == 1)
 				{
@@ -1499,21 +1499,21 @@ yyreduce:
   case 14:
 
 /* Line 1455 of yacc.c  */
-#line 87 "main.y"
+#line 87 "1507034.y"
     {printf("SWITCH case.\n");val=(yyvsp[(3) - (7)].number);;}
     break;
 
   case 15:
 
 /* Line 1455 of yacc.c  */
-#line 89 "main.y"
+#line 89 "1507034.y"
     { printf("\nvalue of expression: %d\n", ((yyvsp[(1) - (2)].number))); ;}
     break;
 
   case 16:
 
 /* Line 1455 of yacc.c  */
-#line 91 "main.y"
+#line 91 "1507034.y"
     {
 							if(number_for_key((yyvsp[(1) - (4)].string))){
 							inskorlam2(&sym[(yyvsp[(3) - (4)].number)], (yyvsp[(1) - (4)].string), (yyvsp[(3) - (4)].number));
@@ -1531,7 +1531,7 @@ yyreduce:
   case 17:
 
 /* Line 1455 of yacc.c  */
-#line 104 "main.y"
+#line 104 "1507034.y"
     {
 								if((yyvsp[(3) - (8)].number))
 								{
@@ -1547,7 +1547,7 @@ yyreduce:
   case 18:
 
 /* Line 1455 of yacc.c  */
-#line 115 "main.y"
+#line 115 "1507034.y"
     {
 								 	if((yyvsp[(3) - (13)].number))
 									{
@@ -1563,7 +1563,7 @@ yyreduce:
   case 19:
 
 /* Line 1455 of yacc.c  */
-#line 125 "main.y"
+#line 125 "1507034.y"
     {
 	   int i=0;
 	   //printf("hoiche\n");
@@ -1576,7 +1576,7 @@ yyreduce:
   case 20:
 
 /* Line 1455 of yacc.c  */
-#line 132 "main.y"
+#line 132 "1507034.y"
     {
 										int i;
 										printf("While LOOP: ");
@@ -1591,7 +1591,7 @@ yyreduce:
   case 25:
 
 /* Line 1455 of yacc.c  */
-#line 152 "main.y"
+#line 152 "1507034.y"
     {
 				//printf("NUM: %d val: %d\n",$2,val);
 						if((yyvsp[(2) - (5)].number)==2){
@@ -1604,7 +1604,7 @@ yyreduce:
   case 26:
 
 /* Line 1455 of yacc.c  */
-#line 161 "main.y"
+#line 161 "1507034.y"
     {
 						if(cntt==0){
 							printf("\nResult in default Value is :  %d \n",(yyvsp[(3) - (4)].number));
@@ -1615,42 +1615,42 @@ yyreduce:
   case 27:
 
 /* Line 1455 of yacc.c  */
-#line 170 "main.y"
+#line 170 "1507034.y"
     { (yyval.number) = (yyvsp[(1) - (1)].number); 	;}
     break;
 
   case 28:
 
 /* Line 1455 of yacc.c  */
-#line 172 "main.y"
+#line 172 "1507034.y"
     { (yyval.number) = number_for_key2((yyvsp[(1) - (1)].string)); printf("Variable value: %d",(yyval.number));}
     break;
 
   case 29:
 
 /* Line 1455 of yacc.c  */
-#line 174 "main.y"
+#line 174 "1507034.y"
     { (yyval.number) = (yyvsp[(1) - (3)].number) + (yyvsp[(3) - (3)].number); ;}
     break;
 
   case 30:
 
 /* Line 1455 of yacc.c  */
-#line 176 "main.y"
+#line 176 "1507034.y"
     { (yyval.number) = (yyvsp[(1) - (3)].number) - (yyvsp[(3) - (3)].number); ;}
     break;
 
   case 31:
 
 /* Line 1455 of yacc.c  */
-#line 178 "main.y"
+#line 178 "1507034.y"
     { (yyval.number) = (yyvsp[(1) - (3)].number) * (yyvsp[(3) - (3)].number); ;}
     break;
 
   case 32:
 
 /* Line 1455 of yacc.c  */
-#line 180 "main.y"
+#line 180 "1507034.y"
     { 	if((yyvsp[(3) - (3)].number)) 
 				  		{
 				     			(yyval.number) = (yyvsp[(1) - (3)].number) / (yyvsp[(3) - (3)].number);
@@ -1666,35 +1666,35 @@ yyreduce:
   case 33:
 
 /* Line 1455 of yacc.c  */
-#line 191 "main.y"
+#line 191 "1507034.y"
     { (yyval.number) = (yyvsp[(1) - (3)].number) < (yyvsp[(3) - (3)].number); ;}
     break;
 
   case 34:
 
 /* Line 1455 of yacc.c  */
-#line 193 "main.y"
+#line 193 "1507034.y"
     { (yyval.number) = (yyvsp[(1) - (3)].number) > (yyvsp[(3) - (3)].number); ;}
     break;
 
   case 35:
 
 /* Line 1455 of yacc.c  */
-#line 195 "main.y"
+#line 195 "1507034.y"
     { (yyval.number) = (yyvsp[(2) - (3)].number);	;}
     break;
 
   case 36:
 
 /* Line 1455 of yacc.c  */
-#line 196 "main.y"
+#line 196 "1507034.y"
     { (yyval.number)=(yyvsp[(2) - (3)].number)+1; printf("inc: %d\n",(yyval.number));;}
     break;
 
 
 
 /* Line 1455 of yacc.c  */
-#line 1698 "main.tab.c"
+#line 1698 "1507034.tab.c"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
@@ -1906,7 +1906,7 @@ yyreturn:
 
 
 /* Line 1675 of yacc.c  */
-#line 198 "main.y"
+#line 198 "1507034.y"
 
 //////////////////////////
 void inskorlam (dict *p, char *s, int n)

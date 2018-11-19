@@ -82,7 +82,7 @@ typedef union YYSTYPE
 {
 
 /* Line 1676 of yacc.c  */
-#line 19 "main.y"
+#line 19 "1507034.y"
 
         int number;
         char *string;
@@ -90,7 +90,7 @@ typedef union YYSTYPE
 
 
 /* Line 1676 of yacc.c  */
-#line 94 "main.tab.h"
+#line 94 "1507034.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */

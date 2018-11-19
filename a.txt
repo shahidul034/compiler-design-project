@@ -1,4 +1,3 @@
-import inout $$
 function @func_name LP   RP
 {
 int  princeaa cm  princebb cm princecc cm princeaa cm princeb $$
