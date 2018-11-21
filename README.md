@@ -19,8 +19,7 @@ Basic arithmetic operators include: Addition (+)=”jog”, subtraction (-)=”b
 
 •	Bitwise Complement (negation) Operator (~):”~~”
 
-•	Prefix Increment (++) and Decrement (--) 
-Operator:"~++" and "~--"
+•	Prefix Increment (++) and Decrement (--) Operator:"~++" and "~--"
 ```
 
 ## logical_operator:
