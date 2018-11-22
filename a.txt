@@ -1,37 +1,44 @@
 function @func_name LP   RP
 {
 int  princeaa cm  princebb cm princecc cm princeaa cm princeb $$
-princeaa = 8 $$
+princebb = 8 $$
 princeaad = 8 $$
 ~++ 8 ~++ $$
 1 jog 8 bag 4 goon 4 $$
 18 biyog 15 jog 8 bag 2 goon 5 $$ 
 IF LP 5 jog 3 biyog 8 RP
 	{
-		12 jog 8 bag 2 $$
+		12 jog 8 bag 2 $$ $$
 	}
 	
 IF LP 5 jog 8 RP
 	{
-		12 jog 8 bag 2 $$
+		IF LP 7 << 5 RP
+	{
+		2 jog 7 jog 6 goon 2 biyog 18 bag 3 $$ $$
+	}
+	ELSE
+	{
+		6 jog 8 bag 4 jog 2 goon 3 biyog 1 $$ $$
+	} $$
 	}
 
 IF LP 7 << 5 RP
 	{
-		2 jog 7 jog 6 goon 2 biyog 18 bag 3 $$
+		2 jog 7 jog 6 goon 2 biyog 18 bag 3 $$ $$
 	}
 ELSE
 	{
-		6 jog 8 bag 4 jog 2 goon 3 biyog 1 $$
+		6 jog 8 bag 4 jog 2 goon 3 biyog 1 $$ $$
 	}
 	
 IF LP 7 >> 5 RP
 	{
-		2 jog 7 jog 6 goon 2 biyog 18 bag 3 $$
+		2 jog 7 jog 6 goon 2 biyog 18 bag 3 $$ $$
 	}
 ELSE
 	{
-		6 jog 8 bag 4 jog 2 goon 3 biyog 1 $$
+		6 jog 8 bag 4 jog 2 goon 3 biyog 1 $$ $$
 	}
 	
 FOR LP 2 : 6 RP { 4 jog 2 }

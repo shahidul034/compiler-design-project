@@ -2,7 +2,7 @@ princeaa is already declared
 
 valid declaration
 
-(princeaa) Value of the variable: 8	
+(princebb) Value of the variable: 8	
 princeaad not declared yet
 inc: 9
 
@@ -12,11 +12,27 @@ value of expression: 9
 
 value of expression: 23
 
+value of expression: 16
+
 condition value zero in IF block
 
-value of expression in IF: 16
+value of expression: 15
+
+value of expression: 13
 
 value of expression in ELSE: 13
+
+value of expression in IF: 8
+
+value of expression: 15
+
+value of expression: 13
+
+value of expression in ELSE: 13
+
+value of expression: 15
+
+value of expression: 13
 
 value of expression in IF: 15
 for loop statement
@@ -32,19 +48,19 @@ multiple_line_comment
 successful compilation
 
 Identfiers=7
-arithmatic_operator=38
+arithmatic_operator=46
 unary_operator=2
 _logical_operator=0
-relational_operator=5
+relational_operator=6
 assignment_operator=0
 library_function=0
 datatype=1
 loop=0
-conditional_statement=6
+conditional_statement=8
 integer=0
 floatnum=0
-NewLine=14
+NewLine=23
 mcmnt=1
 _user_function=0
-Keyword=113
+Keyword=139
 Single line comment=1

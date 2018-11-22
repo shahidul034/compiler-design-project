@@ -1,6 +1,7 @@
 /* author: shakib1507034 */
 
 %{
+	
 	#include<stdio.h>
 	//int sym[26],store[26];
 	int cnt=1,cntt=0,val;
@@ -101,7 +102,7 @@ statement: SM
 							
 						}
 
-	| IF LP expression RP LB expression SM RB %prec IFX {
+	| IF LP expression RP LB statement SM RB %prec IFX {
 								if($3)
 								{
 									printf("\nvalue of expression in IF: %d\n",($6));
@@ -112,7 +113,7 @@ statement: SM
 								}
 							}
 
-	| IF LP expression RP LB expression SM RB ELSE LB expression SM RB {
+	| IF LP expression RP LB statement SM RB ELSE LB statement SM RB {
 								 	if($3)
 									{
 										printf("\nvalue of expression in IF: %d\n",$6);
