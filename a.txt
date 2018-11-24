@@ -1,31 +1,32 @@
 function @func_name LP   RP
 {
-int  princeaa cm  princebb cm princecc cm princeaa cm princeb $$
-princebb = 8 $$
-princeaad = 8 $$
+int  prince_aa cm  prince_bb cm prince_cc cm prince_aa cm prince_b cm prince_bb $$
+prince_cc = 8 $$
+prince_aad = 8 $$
 ~++ 8 ~++ $$
 1 jog 8 bag 4 goon 4 $$
-18 biyog 15 jog 8 bag 2 goon 5 $$ 
+40 biyog 15 jog 8 biyog 3 $$ 
+10 bag 3 $$
 IF LP 5 jog 3 biyog 8 RP
 	{
-		12 jog 8 bag 2 $$ $$
+		12 goon 8 $$ $$
 	}
 	
 IF LP 5 jog 8 RP
 	{
 		IF LP 7 << 5 RP
 	{
-		2 jog 7 jog 6 goon 2 biyog 18 bag 3 $$ $$
+		2 jog 7 jog 6 $$ $$
 	}
 	ELSE
 	{
-		6 jog 8 bag 4 jog 2 goon 3 biyog 1 $$ $$
+		6 jog 8 jog 4 jog 2 $$ $$
 	} $$
 	}
 
 IF LP 7 << 5 RP
 	{
-		2 jog 7 jog 6 goon 2 biyog 18 bag 3 $$ $$
+		2 jog 7 jog 6 $$ $$
 	}
 ELSE
 	{
@@ -45,7 +46,7 @@ FOR LP 2 : 6 RP { 4 jog 2 $$ }
 
 WHILE LP 0 >> 5 RP { 4 jog 2 $$ }
 
-select LP 2 RP { CASE 1 : 4 jog 2 $$ CASE 2 : 3 jog 2 $$ }                                         
+select LP 2 RP { CASE 1 : 4 jog 2 $$ CASE 2 : 3 jog 2 $$ default colon 2 $$ }                                         
 //we try to skip this   
 /m/Bangladesh is a beautiful
 country

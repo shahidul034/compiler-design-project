@@ -59,7 +59,7 @@ TYPE : INT
      ;
 
 ID1  : ID1 CM VAR	{
-						if(number_for_key($3) == 1)
+						if(number_for_key($3) != 0)
 						{
 							printf("%s is already declared\n", $3 );
 						}

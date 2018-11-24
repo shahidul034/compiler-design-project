@@ -10,7 +10,7 @@
 %}
 
 Datatype "int"|"float" 
-identifiers "prince"[a-zA-Z]([a-zA-Z0-9])*
+identifiers "prince_"[a-zA-Z]([a-zA-Z0-9])*
 arithmatic_operator "jog"|"biyog"|"goon"|"bag"|"exp"
 unary_operator "~++"|"~--"|"~~"|"~!"|"~+"|"~-"
 logical_operator [&][&]|[|][|]|[!][!]
@@ -48,12 +48,12 @@ return LB; }
 "}"	  { 
 keyword++ ;
 return RB; }
-"COLON"   {keyword++ ;return COLON;}
+"colon"   {keyword++ ;return COLON;}
 "BREAK"    {  keyword++ ;  return BREAK;     }
 "CASE"      { keyword++ ;return CASE;      }
 "select"      { keyword++ ;return SWITCH;	}
-"DEFAULT"     {  keyword++ ;return DEFAULT; 	}
-"WHILE"  {keyword++ ;return WHILE;}
+"default"     {  keyword++ ;return DEFAULT; 	}
+"WHILE"  {keyword++ ;_loop++;return WHILE;}
 "int"	{ keyword++ ;_datatype++;return INT; }
 "float"	{ keyword++ ;_datatype++;return FLOAT; }
 "char"	{ keyword++ ;_datatype++;return CHAR; }
@@ -62,7 +62,7 @@ return RB; }
 		yylval.number = atoi(yytext);
 		return NUM;
 	}
-"FOR"   {keyword++ ;return FOR;}	
+"FOR"   {keyword++ ;_loop++;return FOR;}	
 "LP"	{keyword++ ; return LP; }
 "RP"	{keyword++ ; return RP; }
 
@@ -81,11 +81,11 @@ return MULT; }
 "bag"	{ keyword++ ;_arithmatic_operator++;
 //printf("bag\n");
 return DIV; }
-"="	{ _relational_operator++;keyword++;return ASSIGN;  }
+"="	{ _relational_operator++;_assignment_operator++;keyword++;return ASSIGN;  }
 ">>"	{_relational_operator++; keyword++ ;return GT; }
 "<<"	{ _relational_operator++;keyword++ ;return LT; }
 
-[a-z]+  {
+[a-z_]+  {
 	_identifiers++;
 	 yylval.string=strdup(yytext);return VAR;
 	}
@@ -110,7 +110,7 @@ int main()
 	yyin = freopen("a.txt","r",stdin);
 	yyout = freopen("out.txt","w",stdout);
 	yyparse();
-	printf("\nIdentfiers=%d\narithmatic_operator=%d\nunary_operator=%d\n_logical_operator=%d\nrelational_operator=%d\nassignment_operator=%d\nlibrary_function=%d\ndatatype=%d\nloop=%d\nconditional_statement=%d\ninteger=%d\nfloatnum=%d\nNewLine=%d\nmcmnt=%d\n_user_function=%d\nKeyword=%d\nSingle line comment=%d\n",_identifiers,_arithmatic_operator,_unary_operator/2,_logical_operator,_relational_operator,_assignment_operator,_library_function,_datatype,_loop,cndstatement,_integer,floatnum,newl,mcmnt,_user_function,keyword,scmnt);
+	printf("\nIdentfiers=%d\narithmatic_operator=%d\nunary_operator=%d\n_logical_operator=%d\nrelational_operator=%d\nassignment_operator=%d\ndatatype=%d\nloop=%d\nconditional_statement=%d\nNewLine=%d\nmultiple line comment=%d\nKeyword=%d\nSingle line comment=%d\n",_identifiers,_arithmatic_operator,_unary_operator/2,_logical_operator,_relational_operator,_assignment_operator,_datatype,_loop,cndstatement,newl,mcmnt,keyword,scmnt);
 
 }
 

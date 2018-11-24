@@ -1,26 +1,29 @@
-princeaa is already declared
+prince_aa is already declared
+prince_bb is already declared
 
 valid declaration
 
-(princebb) Value of the variable: 8	
-princeaad not declared yet
+(prince_cc) Value of the variable: 8	
+prince_aad not declared yet
 inc: 9
 
 value of expression: 9
 
 value of expression: 9
 
-value of expression: 23
+value of expression: 30
 
-value of expression: 16
+value of expression: 3
+
+value of expression: 96
 
 condition value zero in IF block
 
 value of expression: 15
 
-value of expression: 13
+value of expression: 20
 
-value of expression in ELSE: 13
+value of expression in ELSE: 20
 
 value of expression in IF: 8
 
@@ -51,20 +54,16 @@ single line comment
 multiple_line_comment
 successful compilation
 
-Identfiers=7
-arithmatic_operator=46
+Identfiers=8
+arithmatic_operator=37
 unary_operator=1
 _logical_operator=0
 relational_operator=6
-assignment_operator=0
-library_function=0
+assignment_operator=2
 datatype=1
-loop=0
+loop=2
 conditional_statement=8
-integer=0
-floatnum=0
-NewLine=25
-mcmnt=1
-_user_function=0
-Keyword=141
+NewLine=27
+multiple line comment=1
+Keyword=137
 Single line comment=1
