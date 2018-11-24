@@ -35,10 +35,14 @@ value of expression: 15
 value of expression: 13
 
 value of expression in IF: 15
+
+value of expression: 6
 for loop statement
 for loop statement
 for loop statement
 for loop statement
+
+value of expression: 6
 While LOOP: 0 1 2 3 4 5 
 
 Case No : 2  and Result :  5
@@ -49,7 +53,7 @@ successful compilation
 
 Identfiers=7
 arithmatic_operator=46
-unary_operator=2
+unary_operator=1
 _logical_operator=0
 relational_operator=6
 assignment_operator=0
@@ -59,8 +63,8 @@ loop=0
 conditional_statement=8
 integer=0
 floatnum=0
-NewLine=23
+NewLine=25
 mcmnt=1
 _user_function=0
-Keyword=139
+Keyword=141
 Single line comment=1

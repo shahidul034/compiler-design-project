@@ -878,7 +878,7 @@ case 31:
 YY_RULE_SETUP
 #line 88 "1507034.l"
 {
-_identifiers++;
+	_identifiers++;
 	 yylval.string=strdup(yytext);return VAR;
 	}
 	YY_BREAK
@@ -1811,7 +1811,7 @@ int main()
 	yyin = freopen("a.txt","r",stdin);
 	yyout = freopen("out.txt","w",stdout);
 	yyparse();
-	printf("\nIdentfiers=%d\narithmatic_operator=%d\nunary_operator=%d\n_logical_operator=%d\nrelational_operator=%d\nassignment_operator=%d\nlibrary_function=%d\ndatatype=%d\nloop=%d\nconditional_statement=%d\ninteger=%d\nfloatnum=%d\nNewLine=%d\nmcmnt=%d\n_user_function=%d\nKeyword=%d\nSingle line comment=%d\n",_identifiers,_arithmatic_operator,_unary_operator,_logical_operator,_relational_operator,_assignment_operator,_library_function,_datatype,_loop,cndstatement,_integer,floatnum,newl,mcmnt,_user_function,keyword,scmnt);
+	printf("\nIdentfiers=%d\narithmatic_operator=%d\nunary_operator=%d\n_logical_operator=%d\nrelational_operator=%d\nassignment_operator=%d\nlibrary_function=%d\ndatatype=%d\nloop=%d\nconditional_statement=%d\ninteger=%d\nfloatnum=%d\nNewLine=%d\nmcmnt=%d\n_user_function=%d\nKeyword=%d\nSingle line comment=%d\n",_identifiers,_arithmatic_operator,_unary_operator/2,_logical_operator,_relational_operator,_assignment_operator,_library_function,_datatype,_loop,cndstatement,_integer,floatnum,newl,mcmnt,_user_function,keyword,scmnt);
 
 }
 

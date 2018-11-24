@@ -123,14 +123,14 @@ statement: SM
 										printf("\nvalue of expression in ELSE: %d\n",$11);
 									}
 								   }
-	| FOR LP NUM COL NUM RP LB expression RB     {
+	| FOR LP NUM COL NUM RP LB statement RB     {
 	   int i=0;
 	   //printf("hoiche\n");
 	   for(i=$3;i<$5;i++){
 	   printf("for loop statement\n");
 	   }
 	}
-	| WHILE LP NUM GT NUM RP LB expression RB   {
+	| WHILE LP NUM GT NUM RP LB statement RB   {
 										int i;
 										printf("While LOOP: ");
 										for(i=$3;i<=$5;i++)

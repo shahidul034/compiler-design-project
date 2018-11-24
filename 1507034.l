@@ -9,7 +9,7 @@
 
 %}
 
-Datatype "int"|"float"
+Datatype "int"|"float" 
 identifiers "prince"[a-zA-Z]([a-zA-Z0-9])*
 arithmatic_operator "jog"|"biyog"|"goon"|"bag"|"exp"
 unary_operator "~++"|"~--"|"~~"|"~!"|"~+"|"~-"
@@ -86,7 +86,7 @@ return DIV; }
 "<<"	{ _relational_operator++;keyword++ ;return LT; }
 
 [a-z]+  {
-_identifiers++;
+	_identifiers++;
 	 yylval.string=strdup(yytext);return VAR;
 	}
 
@@ -110,7 +110,7 @@ int main()
 	yyin = freopen("a.txt","r",stdin);
 	yyout = freopen("out.txt","w",stdout);
 	yyparse();
-	printf("\nIdentfiers=%d\narithmatic_operator=%d\nunary_operator=%d\n_logical_operator=%d\nrelational_operator=%d\nassignment_operator=%d\nlibrary_function=%d\ndatatype=%d\nloop=%d\nconditional_statement=%d\ninteger=%d\nfloatnum=%d\nNewLine=%d\nmcmnt=%d\n_user_function=%d\nKeyword=%d\nSingle line comment=%d\n",_identifiers,_arithmatic_operator,_unary_operator,_logical_operator,_relational_operator,_assignment_operator,_library_function,_datatype,_loop,cndstatement,_integer,floatnum,newl,mcmnt,_user_function,keyword,scmnt);
+	printf("\nIdentfiers=%d\narithmatic_operator=%d\nunary_operator=%d\n_logical_operator=%d\nrelational_operator=%d\nassignment_operator=%d\nlibrary_function=%d\ndatatype=%d\nloop=%d\nconditional_statement=%d\ninteger=%d\nfloatnum=%d\nNewLine=%d\nmcmnt=%d\n_user_function=%d\nKeyword=%d\nSingle line comment=%d\n",_identifiers,_arithmatic_operator,_unary_operator/2,_logical_operator,_relational_operator,_assignment_operator,_library_function,_datatype,_loop,cndstatement,_integer,floatnum,newl,mcmnt,_user_function,keyword,scmnt);
 
 }
 
