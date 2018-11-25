@@ -78,15 +78,17 @@ For single line comment we use “[%].*”
 “[ ]*[/][m][/][a-zA-Z0-9!@#*(){}_+-,.:\|?><\n\t ]*[/][m][/]”
 ```
 ## switch case:
-'''
+```
 switch : "select"
 case   : "CASE"
 DEFAULT: "default"
 Break  : "BREAK"
 ":"    : "colon"
 
-'''
+```
 ## paraenthesis
-'''
+```
 { : "{"
 } : "}"
+
+```
