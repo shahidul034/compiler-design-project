@@ -1,10 +1,12 @@
 function @func_name LP   RP
 {
-int  prince_aa cm  prince_bb cm prince_cc cm prince_aa cm prince_b cm prince_bb $$
-prince_cc = 8 $$
-prince_aad = 8 $$
-~++ 8 ~++ $$
-1 jog 8 bag 4 goon 4 $$
+int  prince_aa cm  prince_bb cm prince_cc cm prince_aa cm prince_b cm prince_bb cm prince_cnt $$
+prince_cc = 7 $$
+prince_b = 8 $$
+prince_aad = 9 $$
+
+
+prince_b goon 4 $$
 40 biyog 15 jog 8 biyog 3 $$ 
 10 bag 3 $$
 IF LP 5 jog 3 biyog 8 RP
@@ -45,12 +47,12 @@ ELSE
 FOR LP 2 : 6 RP { 4 jog 2 $$ }
 
 WHILE LP 0 >> 5 RP { 4 jog 2 $$ }
-
-select LP 2 RP { CASE 1 : 4 jog 2 $$ CASE 2 : 3 jog 2 $$ default colon 2 $$ }                                         
+prince_cnt = 2 $$
+select LP prince_cnt RP { CASE 1 : 4 jog 2 $$ CASE 2 : 3 jog 2 $$ default colon 2 $$ }                                         
 //we try to skip this   
 /m/Bangladesh is a beautiful
 country
 /m/
-
-	
+SHOWOUT LP prince_cnt RP $$
+~++ prince_b ~++ $$	
 }

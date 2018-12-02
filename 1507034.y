@@ -25,7 +25,7 @@
 
 %token <number> NUM
 %token <string> VAR 
-%token <string> IF ELSE VOIDMAIN INT FLOAT CHAR LP RP LB RB CM SM PLUS MINUS MULT DIV ASSIGN FOR COL WHILE BREAK COLON DEFAULT CASE SWITCH inc importtt inpit
+%token <string> IF ELSE VOIDMAIN INT FLOAT CHAR LP RP LB RB CM SM PLUS MINUS MULT DIV ASSIGN FOR COL WHILE BREAK COLON DEFAULT CASE SWITCH inc importtt inpit SHOWOUT
 %type <string> statement
 %type <number> expression
 %nonassoc IFX
@@ -72,7 +72,7 @@ ID1  : ID1 CM VAR	{
 			}
 
      |VAR	{
-				if(number_for_key($1) == 1)
+				if(number_for_key($1) != 0)
 				{
 					printf("%s is already declared\n", $1  );
 				}
@@ -81,6 +81,7 @@ ID1  : ID1 CM VAR	{
 					inskorlam (&store[cnt],$1, cnt);
 							cnt++;
 				}
+				
 			}
      ;
 
@@ -91,14 +92,15 @@ statement: SM
 
         | VAR ASSIGN expression SM 		{
 							if(number_for_key($1)){
-							inskorlam2(&sym[$3], $1, $3);
 							
-							//printf("\n(%s) Value of the variable: %d\t\n",sym[$3].str,sym[$3].n); 
+							inskorlam2(&sym[cnt2], $1, $3);
+							cnt2++;
 							printf("\n(%s) Value of the variable: %d\t\n",$1,$3);
 							}
 							else {
 							printf("%s not declared yet\n",$1);
 							}
+						
 							
 						}
 
@@ -125,7 +127,7 @@ statement: SM
 								   }
 	| FOR LP NUM COL NUM RP LB statement RB     {
 	   int i=0;
-	   //printf("hoiche\n");
+	 
 	   for(i=$3;i<$5;i++){
 	   printf("for loop statement\n");
 	   }
@@ -170,7 +172,9 @@ statement: SM
 	
 expression: NUM				{ $$ = $1; 	}
 
-	| VAR				{ $$ = number_for_key2($1); printf("Variable value: %d",$$)}
+	| VAR				{ $$ = number_for_key2($1); printf("Variable value: %d\n",$$);}
+	
+	| SHOWOUT LP expression RP     {printf("print: %d\n",$3);}    
 
 	| expression PLUS expression	{ $$ = $1 + $3; }
 
@@ -227,14 +231,19 @@ void inskorlam2 (dict *p, char *s, int n)
 int
 number_for_key2(char *key)
 {
-    int i = 1;
+     
+	 int i = 1;
     char *name = sym[i].str;
-    while (name) {
+	int cnt4=1000;
+    while (cnt4--) {
         if (strcmp(name, key) == 0)
             return sym[i].n;
         name = sym[++i].str;
     }
+	
     return 0;
+	
+	
 }
 
 ///////////////////////////

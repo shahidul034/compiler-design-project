@@ -3,13 +3,13 @@ prince_bb is already declared
 
 valid declaration
 
-(prince_cc) Value of the variable: 8	
+(prince_cc) Value of the variable: 7	
+
+(prince_b) Value of the variable: 8	
 prince_aad not declared yet
-inc: 9
+Variable value: 8
 
-value of expression: 9
-
-value of expression: 9
+value of expression: 32
 
 value of expression: 30
 
@@ -48,22 +48,36 @@ for loop statement
 value of expression: 6
 While LOOP: 0 1 2 3 4 5 
 
+(prince_cnt) Value of the variable: 2	
+Variable value: 2
+NUM: 1 val: 0
+NUM: 2 val: 0
+
 Case No : 2  and Result :  5
 SWITCH case.
 single line comment
 multiple_line_comment
+Variable value: 2
+print: 2
+
+value of expression: 2
+Variable value: 8
+inc: 9
+
+value of expression: 9
+
 successful compilation
 
-Identfiers=8
-arithmatic_operator=37
+Identfiers=15
+arithmatic_operator=35
 unary_operator=1
 _logical_operator=0
-relational_operator=6
-assignment_operator=2
+relational_operator=8
+assignment_operator=4
 datatype=1
 loop=2
 conditional_statement=8
-NewLine=27
+NewLine=30
 multiple line comment=1
-Keyword=137
+Keyword=143
 Single line comment=1

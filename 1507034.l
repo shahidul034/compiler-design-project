@@ -37,9 +37,9 @@ scmnt++;
 }
 {multiple_line_comment} {
 mcmnt++;
-printf("multiple_line_comment");
+printf("multiple_line_comment\n");
 }
-
+"SHOWOUT"  return SHOWOUT;
 "~++"    {_unary_operator++;return inc;}
 "{"	 {
 keyword++ ;

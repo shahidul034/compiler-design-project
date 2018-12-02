@@ -69,9 +69,10 @@
      inc = 285,
      importtt = 286,
      inpit = 287,
-     IFX = 288,
-     GT = 289,
-     LT = 290
+     SHOWOUT = 288,
+     IFX = 289,
+     GT = 290,
+     LT = 291
    };
 #endif
 
@@ -90,7 +91,7 @@ typedef union YYSTYPE
 
 
 /* Line 1676 of yacc.c  */
-#line 94 "1507034.tab.h"
+#line 95 "1507034.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
