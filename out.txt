@@ -15,7 +15,7 @@ value of expression: 30
 
 value of expression: 3
 
-value of expression: 96
+(prince_cntt) Value of the variable: 12	
 
 condition value zero in IF block
 
@@ -48,17 +48,15 @@ for loop statement
 value of expression: 6
 While LOOP: 0 1 2 3 4 5 
 
-(prince_cnt) Value of the variable: 2	
-Variable value: 2
-NUM: 1 val: 0
-NUM: 2 val: 0
+(prince_cnt) Value of the variable: 7	
+Variable value: 7
 
-Case No : 2  and Result :  5
+Result in default Value is :  2 
 SWITCH case.
 single line comment
 multiple_line_comment
-Variable value: 2
-print: 2
+Variable value: 7
+print: 7
 
 value of expression: 2
 Variable value: 8
@@ -68,16 +66,16 @@ value of expression: 9
 
 successful compilation
 
-Identfiers=15
-arithmatic_operator=35
+Identfiers=17
+arithmatic_operator=34
 unary_operator=1
 _logical_operator=0
-relational_operator=8
-assignment_operator=4
+relational_operator=9
+assignment_operator=5
 datatype=1
 loop=2
 conditional_statement=8
 NewLine=30
 multiple line comment=1
-Keyword=143
+Keyword=144
 Single line comment=1

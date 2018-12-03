@@ -11,7 +11,7 @@
 	}dict;
 	dict store[1000],sym[1000];
 	void inskorlam (dict *p, char *s, int n);
-	
+	int ch;
 	int cnt2=1; 
 	void inskorlam2 (dict *p, char *s, int n);
 	
@@ -23,11 +23,11 @@
 }
 /* BISON Declarations */
 
-%token <number> NUM
+%token <number> NUM 
 %token <string> VAR 
 %token <string> IF ELSE VOIDMAIN INT FLOAT CHAR LP RP LB RB CM SM PLUS MINUS MULT DIV ASSIGN FOR COL WHILE BREAK COLON DEFAULT CASE SWITCH inc importtt inpit SHOWOUT
 %type <string> statement
-%type <number> expression
+%type <number> expression expression_switch
 %nonassoc IFX
 %nonassoc ELSE
 %left LT GT
@@ -86,7 +86,7 @@ ID1  : ID1 CM VAR	{
      ;
 
 statement: SM
-	| SWITCH LP expression RP LB BASE RB    {printf("SWITCH case.\n");val=$3;} 
+	| SWITCH LP expression_switch RP LB BASE RB    {printf("SWITCH case.\n");val=$3;} 
 
 	| expression SM 			{ printf("\nvalue of expression: %d\n", ($1)); }
 
@@ -142,6 +142,31 @@ statement: SM
 										printf("\n");
 	}
 	;
+	expression_switch : NUM				{ $$ = $1;ch=$$; 	}
+
+	| VAR				{ $$ = number_for_key2($1); printf("Variable value: %d\n",$$);ch=$$;}
+	
+	| SHOWOUT LP expression_switch RP     {printf("print: %d\n",$3);ch=$$;}    
+
+	| expression_switch PLUS expression_switch	{ $$ = $1 + $3;ch=$$; }
+
+	| expression_switch MINUS expression_switch	{ $$ = $1 - $3;ch=$$; }
+
+	| expression_switch MULT expression_switch	{ $$ = $1 * $3;ch=$$; }
+
+	| expression_switch DIV expression_switch	{ 	if($3) 
+				  		{
+				     			$$ = $1 / $3;
+				  		}
+				  		else
+				  		{
+							$$ = 0;
+							printf("\ndivision by zero\t");
+				  		}
+						ch=$$;						
+				    	}
+						;
+
 ///////////////////////
 	
 			BASE : Bas   
@@ -154,7 +179,7 @@ statement: SM
 
 			Cs    : CASE NUM COL expression SM   {
 				//printf("NUM: %d val: %d\n",$2,val);
-						if($2==2){
+						if($2==ch){
 							  cntt=1;
 							  printf("\nCase No : %d  and Result :  %d\n",$2,$4);
 						}
